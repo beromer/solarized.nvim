@@ -247,6 +247,10 @@ function solarized.getTheme(options)
         IndentBlanklineChar =        { fg = c.base02 },
         IndentBlanklineContextChar = { fg = c.base02 },
 
+        -- Treesitter Context
+        TreesitterContextLineNumber = { fg = c.orange, bg = c.base03 },
+        TreesitterContext           = { bg = c.base02 },
+
     }
 
     -- Italic strings
