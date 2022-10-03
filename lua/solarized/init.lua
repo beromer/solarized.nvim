@@ -2,12 +2,20 @@ local highlight = function (class)
     for g, c in pairs(class) do
         local opts = {}
 
-        opts.gui   = c.st or 'NONE'
-        opts.guifg = c.fg or 'NONE'
-        opts.guibg = c.bg or 'NONE'
-        opts.guisp = c.sp or 'NONE'
+        -- opts.gui   = c.st or 'NONE'
+        -- opts.fg = c.fg or 'NONE'
+        -- opts.bg = c.bg or 'NONE'
+        -- opts.sp = c.sp or 'NONE'
+        -- opts.reverse = c.rv or false
 
-        vim.highlight.create(g, opts, false)
+        
+        -- opts.gui   = c.st or 'NONE'
+        -- opts.guifg = c.fg or 'NONE'
+        -- opts.guibg = c.bg or 'NONE'
+        -- opts.guisp = c.sp or 'NONE'
+
+        -- vim.highlight.create(g, opts, false)
+        vim.api.nvim_set_hl(0, g, c)
     end
 end
 
