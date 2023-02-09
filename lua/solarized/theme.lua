@@ -31,6 +31,7 @@ function solarized.getTheme(options)
         Constant =            { fg = c.yellow  },
         Character =           { fg = c.orange  },
         Number =              { fg = c.orange  },
+        -- Identifier =          { fg = c.violet  },
         Boolean =             { fg = c.orange  },
         Float =               { fg = c.orange  },
         Statement =           { fg = c.green   },
@@ -141,55 +142,6 @@ function solarized.getTheme(options)
     }
 
     theme.plugins = {
-        TSAnnotation =        { fg = c.red, bold=true },
-        TSAttribute =         { fg = c.yellow },
-        TSBoolean=            { fg = c.cyan   },
-        TSCharacter=          { fg = c.orange },
-        TSConstructor =       { fg = c.blue   },
-        TSConstant =          { fg = c.yellow },
-        TSConstBuiltin =      { fg = c.blue   },
-        TSConstMacro =        { fg = c.blue   },
-        TSError =             { fg = c.red,    bold=true },
-        TSException =         { fg = c.yellow, bold=true },
-        TSField =             { fg = c.base1  },
-        TSFloat =             { fg = c.cyan   },
-        TSFuncMacro =         { fg = c.blue   },
-        TSInclude =           { fg = c.orange, bold=true },
-        TSLabel =             { fg = c.red    },
-        TSNamespace =         { fg = c.yellow },
-        TSNumber =            { fg = c.cyan   },
-        TSOperator =          { fg = c.base0  },
-        TSParameter =         { fg = c.blue   },
-        TSParameterReference= { fg = c.green  },
-        TSProperty =          { fg = c.green  },
-        TSPunctDelimiter =    { fg = c.base0  },
-        TSPunctBracket =      { fg = c.red    },
-        TSPunctSpecial =      { fg = c.base0  },
-        TSStringRegex =       { fg = c.blue   },
-        TSStringEscape =      { fg = c.base02 },
-        TSSymbol =            { fg = c.yellow },
-        TSType =              { fg = c.yellow, bold=true },
-        TSTypeBuiltin =       { fg = c.violet },
-        TSTag =               { fg = c.red,    bold=true },
-        TSTagDelimiter =      { fg = c.yellow },
-        TSText =              { fg = c.base01 },
-        TSTextReference =     { fg = c.yellow },
-        TSEmphasis =          { fg = c.base01, bold=true },
-        TSUnderline =         { fg = c.base00, bg = c.none, underline=true},
-        TSTitle =             { fg = c.base01, bg = c.none, bold=true },
-        TSLiteral =           { fg = c.base00 },
-        TSURI =               { fg = c.cyan   },
-        TSString =            { fg = c.cyan   },
-        TSComment=            { fg = c.base01 },
-        TSConditional =       { fg = c.green  },
-        TSKeyword =           { fg = c.green  },
-        TSRepeat =            { fg = c.green,  bold=true },
-        TSKeywordFunction =   { fg = c.green,  bold=true },
-        TSFunction =          { fg = c.violet, bold=true },
-        TSMethod =            { fg = c.violet, bold=true },
-        TSFuncBuiltin =       { fg = c.yellow, bold=true },
-        TSVariable =          { fg = c.base0  },
-        TSVariableBuiltin =   { fg = c.base0  },
 
         -- LSP
         LspDiagnosticsDefaultError =           { fg = c.red },
@@ -252,6 +204,58 @@ function solarized.getTheme(options)
         TreesitterContext           = { bg = c.base02 },
 
     }
+
+    -- theme.plugins["@variable"] = { fg = c.base0 }
+    -- theme.plugins["@field"] = { fg = c.base0 }
+    theme.plugins["@annotation"] =        { fg = c.red, bold=true }
+    theme.plugins["@attribute"] =         { fg = c.yellow }
+    theme.plugins["@boolean"] =           { fg = c.cyan  } 
+    theme.plugins["@character"] =         { fg = c.orange }
+    theme.plugins["@constructor"] =       { fg = c.yellow   }
+    theme.plugins["@constant"] =          { fg = c.yellow }
+    theme.plugins["@constBuiltin"] =      { fg = c.blue   }
+    theme.plugins["@constMacro"] =        { fg = c.blue   }
+    theme.plugins["@error"] =             { fg = c.red,    bold=true }
+    theme.plugins["@exception"] =         { fg = c.yellow, bold=true }
+    theme.plugins["@field"] =             { fg = c.base1  }
+    theme.plugins["@float"] =             { fg = c.cyan   }
+    theme.plugins["@funcMacro"] =         { fg = c.blue   }
+    theme.plugins["@include"] =           { fg = c.orange, bold=true }
+    theme.plugins["@label"] =             { fg = c.red    }
+    theme.plugins["@namespace"] =         { fg = c.yellow }
+    theme.plugins["@number"] =            { fg = c.cyan   }
+    theme.plugins["@operator"] =          { fg = c.base0  }
+    theme.plugins["@parameter"] =         { fg = c.blue   }
+    theme.plugins["@parameterReference"] ={ fg = c.green  }
+    theme.plugins["@property"] =          { fg = c.green  }
+    theme.plugins["@punctuation.delimiter"] =    { fg = c.base0  }
+    theme.plugins["@punctuation.bracket"] =      { fg = c.red    }
+    theme.plugins["@punctuation.special"] =      { fg = c.base0  }
+    theme.plugins["@string.regex"] =       { fg = c.blue   }
+    theme.plugins["@string.escape"] =      { fg = c.base02 }
+    theme.plugins["@symbol"] =            { fg = c.yellow }
+    theme.plugins["@type"] =              { fg = c.yellow, bold=true }
+    theme.plugins["@typeBuiltin"] =       { fg = c.violet }
+    theme.plugins["@tag"] =               { fg = c.red,    bold=true }
+    theme.plugins["@tagDelimiter"] =      { fg = c.yellow }
+    theme.plugins["@text"] =              { fg = c.base01 }
+    theme.plugins["@textReference"] =     { fg = c.yellow }
+    theme.plugins["@emphasis"] =          { fg = c.base01, bold=true }
+    theme.plugins["@underline"] =         { fg = c.base00, bg = c.none, underline=true}
+    theme.plugins["@title"] =             { fg = c.base01, bg = c.none, bold=true }
+    theme.plugins["@literal"] =           { fg = c.base00 }
+    theme.plugins["@URI"] =               { fg = c.cyan   }
+    theme.plugins["@string"] =            { fg = c.green  }
+    theme.plugins["@comment"] =           { fg = c.base01 }
+    theme.plugins["@conditional"] =       { fg = c.green  }
+    theme.plugins["@keyword"] =           { fg = c.green  }
+    theme.plugins["@repeat"] =            { fg = c.green,  bold=true }
+    theme.plugins["@keywordFunction"] =   { fg = c.green,  bold=true }
+    theme.plugins["@function"] =          { fg = c.violet, bold=true }
+    theme.plugins["@method"] =            { fg = c.violet, bold=true }
+    theme.plugins["@funcBuiltin"] =       { fg = c.yellow, bold=true }
+    theme.plugins["@variable"] =          { fg = c.violet  }
+    theme.plugins["@variableBuiltin"] =   { fg = c.base0  }
 
     -- Italic strings
     if options.italic_strings == true then
